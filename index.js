@@ -12,7 +12,7 @@ function json(data, status = 200) {
 }
 
 function esc(value = '') {
-  return String(value).replace(/[&<>'"]/g, c => ({ '&':'&amp;', '<':'&lt;', '>':'&gt;', "'":'&#39;', '"':'&quot;' })[c]);
+  return String(value).replace(/[&<>\'\"]/g, c => ({ '&':'&amp;', '<':'&lt;', '>':'&gt;', "'":'&#39;', '"':'&quot;' })[c]);
 }
 
 async function readBody(request) {
@@ -26,6 +26,7 @@ export default {
   async fetch(request, env) {
     const url = new URL(request.url);
 
+    // Simple live diagnostic. Does not reveal the secret value.
     if (url.pathname === '/api/health' && request.method === 'GET') {
       return json({ ok: true, resendConfigured: Boolean(env.RESEND_API_KEY) });
     }
@@ -43,17 +44,32 @@ export default {
         const uiLanguage = body.uiLanguage === 'ta' ? 'ta' : 'en';
 
         if (!name || !phone || !email) {
-          return json({ ok: false, error: uiLanguage === 'ta' ? 'பெயர், WhatsApp எண் மற்றும் மின்னஞ்சல் அவசியம்.' : 'Name, WhatsApp number and email are required.' }, 400);
+          return json({
+            ok: false,
+            error: uiLanguage === 'ta'
+              ? 'பெயர், WhatsApp எண் மற்றும் மின்னஞ்சல் அவசியம்.'
+              : 'Name, WhatsApp number and email are required.'
+          }, 400);
         }
+
         if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)) {
-          return json({ ok: false, error: uiLanguage === 'ta' ? 'சரியான மின்னஞ்சல் முகவரியை உள்ளிடவும்.' : 'Please enter a valid email address.' }, 400);
+          return json({
+            ok: false,
+            error: uiLanguage === 'ta'
+              ? 'சரியான மின்னஞ்சல் முகவரியை உள்ளிடவும்.'
+              : 'Please enter a valid email address.'
+          }, 400);
         }
+
         if (!env.RESEND_API_KEY) {
-          console.error('RESEND_API_KEY runtime secret is missing. Add it under Worker Settings > Variables and Secrets (not Workers Builds).');
+          console.error('RESEND_API_KEY runtime secret is missing.');
           return json({ ok: false, error: uiLanguage === 'ta' ? 'மின்னஞ்சல் சேவை இன்னும் அமைக்கப்படவில்லை.' : 'Email service is not configured yet.' }, 500);
         }
 
-        const subject = uiLanguage === 'ta' ? `புதிய ஆலோசனை விசாரணை — ${name}` : `New consultation enquiry — ${name}`;
+        const subject = uiLanguage === 'ta'
+          ? `புதிய ஆலோசனை விசாரணை — ${name}`
+          : `New consultation enquiry — ${name}`;
+
         const html = `<!doctype html><html><body style="font-family:Arial,sans-serif;color:#183a56;line-height:1.6">
           <h2 style="color:#062b49">New Consultation Enquiry</h2>
           <p><strong>Name:</strong> ${esc(name)}</p>
@@ -84,7 +100,12 @@ export default {
         if (!response.ok) {
           const detail = await response.text();
           console.error('Resend rejected email:', response.status, detail);
-          return json({ ok: false, error: uiLanguage === 'ta' ? 'மின்னஞ்சலை அனுப்ப முடியவில்லை. தயவுசெய்து WhatsApp மூலம் தொடர்புகொள்ளவும்.' : 'We could not send the enquiry. Please contact us on WhatsApp.' }, 502);
+          return json({
+            ok: false,
+            error: uiLanguage === 'ta'
+              ? 'மின்னஞ்சலை அனுப்ப முடியவில்லை. தயவுசெய்து WhatsApp மூலம் தொடர்புகொள்ளவும்.'
+              : 'We could not send your enquiry. Please contact us on WhatsApp.'
+          }, 502);
         }
 
         const result = await response.json();

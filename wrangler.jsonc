@@ -8,8 +8,6 @@
     "binding": "ASSETS"
   },
   "secrets": {
-    "required": [
-      "RESEND_API_KEY"
-    ]
+    "required": ["RESEND_API_KEY"]
   }
 }
