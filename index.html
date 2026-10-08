@@ -2,9 +2,15 @@
 <html lang="en">
 <head>
 <meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
 <title>Shri Dharmasastha Astrological Center | Bharani Subramanian</title>
 <meta name="description" content="Traditional Tamil astrology and spiritual guidance by Bharani Subramanian. Horoscope, marriage compatibility, Jamakkol, Chozhi Prasannam, Nadi, numerology and tarot.">
+<meta name="robots" content="index,follow">
+<meta property="og:title" content="Shri Dharmasastha Astrological Center">
+<meta property="og:description" content="Traditional Tamil astrology and spiritual guidance by Bharani Subramanian.">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://dharmasasthaastrology.com/">
+<link rel="canonical" href="https://dharmasasthaastrology.com/">
 <link rel="stylesheet" href="styles.css">
 </head>
 <body>
@@ -13,105 +19,66 @@
     <div class="om">ॐ</div>
     <div><div class="brand-title">Shri Dharmasastha</div><div class="brand-sub">Astrological Center</div></div>
   </div>
-  <nav>
-    <a class="active" href="#home">Home</a><a href="#about">About</a><a href="#services">Services</a>
-    <a href="#fees">Horoscope &amp; Marriage</a><a href="#recognition">Recognition</a>
-    <a href="#consultation">Consultation</a><a href="#contact">Contact</a>
+  <div class="header-actions">
+    <div class="langs"><button type="button" id="langEN" class="lang-btn active">EN</button><span class="lang-sep">|</span><button type="button" id="langTA" class="lang-btn">தமிழ்</button></div>
+    <button class="menu-toggle" id="menuToggle" type="button" aria-expanded="false" aria-controls="mainNav"><span></span><span></span><span></span><span class="sr-only">Menu</span></button>
+  </div>
+  <nav id="mainNav" aria-label="Main navigation">
+    <a class="active" href="#home" data-i18n="navHome">Home</a><a href="#about" data-i18n="navAbout">About</a><a href="#services" data-i18n="navServices">Services</a>
+    <a href="#fees" data-i18n="navFees">Horoscope &amp; Marriage</a><a href="#recognition" data-i18n="navRecognition">Recognition</a>
+    <a href="#consultation" data-i18n="navConsultation">Consultation</a><a href="#contact" data-i18n="navContact">Contact</a>
   </nav>
-  <div class="langs">EN&nbsp; | &nbsp;தமிழ்</div>
 </header>
 
 <main>
 <section id="home" class="hero">
-  <div class="hero-photo left"><img src="bharani.jpg" alt="Bharani Subramanian"></div>
   <div class="hero-center">
-    <h1>Bharani Subramanian</h1>
-    <h2>Traditional Tamil Astrologer</h2>
-    <div class="gold-rule"></div>
-    <h3>Shri Dharmasastha<br>Astrological Center</h3>
-    <p>Traditional astrology and spiritual guidance<br>for a better tomorrow.</p>
-    <div class="hero-buttons">
-      <a class="btn whatsapp" href="https://wa.me/919847293306" target="_blank">◉ &nbsp; Chat on WhatsApp</a>
-      <a class="btn" href="#consultation">Request a Consultation</a>
-    </div>
-    <div class="hero-meta">Language: English &nbsp; | &nbsp; Tamil &nbsp; | &nbsp; ◉ &nbsp; Worldwide Services</div>
+    <h1>Bharani Subramanian</h1><h2 data-i18n="heroTitle">Traditional Tamil Astrologer</h2><div class="gold-rule"></div>
+    <h3 data-i18n="heroCenterTitle">Shri Dharmasastha<br>Astrological Center</h3>
+    <p data-i18n="heroDesc">Traditional astrology and spiritual guidance<br>for a better tomorrow.</p>
+    <div class="hero-buttons"><a class="btn whatsapp" href="https://wa.me/919847293306" target="_blank" rel="noopener" data-i18n="heroWhatsApp">◉ &nbsp; Chat on WhatsApp</a><a class="btn" href="#consultation" data-i18n="heroConsult">Request a Consultation</a></div>
+    <div class="hero-meta" data-i18n="heroMeta">Language: English &nbsp; | &nbsp; Tamil &nbsp; | &nbsp; ◉ &nbsp; Worldwide Services</div>
   </div>
-  <div class="hero-photo right"><img src="dharmasastha.jpg" alt="Dharmasastha deity"></div>
+  <div class="hero-photo left"><img src="bharani-fixed.jpg" alt="Bharani Subramanian"></div>
+  <div class="hero-photo right"><img src="dharmasastha-fixed.jpg" alt="Dharmasastha deity"></div>
 </section>
 
 <section id="services" class="services section-paper">
-  <div class="section-heading"><span>◆</span><h2>Services</h2><span>◆</span></div>
-  <div class="subtitle">Guidance through the wisdom of tradition</div>
+  <div class="section-heading"><span>◆</span><h2 data-i18n="servicesTitle">Services</h2><span>◆</span></div><div class="subtitle" data-i18n="servicesSubtitle">Guidance through the wisdom of tradition</div>
   <div class="service-grid">
-    <article class="card"><div class="icon">✧</div><h3>Traditional Astrology</h3><ul>
-      <li>Birth chart &amp; new horoscope</li><li>Traditional horoscope writing</li><li>Marriage compatibility</li><li>Career guidance</li><li>Parigaram (traditional remedies)</li><li>Jamakkol</li>
-    </ul></article>
-    <article class="card"><div class="icon">◉</div><h3>Prasannam &amp;<br>Predictive Methods</h3><ul><li>Jamakkol Prasannam</li><li>Chozhi Prasannam</li><li>Nadi astrology</li></ul></article>
-    <article class="card"><div class="icon">♧</div><h3>Other Consultations</h3><ul><li>Tarot reading</li><li>Numerology</li></ul></article>
-    <article class="quote-card"><div>“Astrology is not about<br>predicting the future,<br>but about understanding<br>your path and finding<br>solutions to your problems.”</div><div class="quote-rule">◆</div></article>
+    <article class="card"><div class="icon">✧</div><h3 data-i18n="service1Title">Traditional Astrology</h3><ul><li data-i18n="s1a">Birth chart &amp; new horoscope</li><li data-i18n="s1b">Traditional horoscope writing</li><li data-i18n="s1c">Marriage compatibility</li><li data-i18n="s1d">Career guidance</li><li data-i18n="s1e">Parigaram (traditional remedies)</li><li data-i18n="s1f">Jamakkol</li></ul></article>
+    <article class="card"><div class="icon">◉</div><h3 data-i18n="service2Title">Prasannam &amp;<br>Predictive Methods</h3><ul><li data-i18n="s2a">Jamakkol Prasannam</li><li data-i18n="s2b">Chozhi Prasannam</li><li data-i18n="s2c">Nadi astrology</li></ul></article>
+    <article class="card"><div class="icon">♧</div><h3 data-i18n="service3Title">Other Consultations</h3><ul><li data-i18n="s3a">Tarot reading</li><li data-i18n="s3b">Numerology</li></ul></article>
+    <article class="quote-card"><div data-i18n="quote">“Astrology is not about<br>predicting the future,<br>but about understanding<br>your path and finding<br>solutions to your problems.”</div><div class="quote-rule">◆</div></article>
   </div>
 </section>
 
 <section id="about" class="about section-navy">
-  <div class="about-copy">
-    <h2>About Bharani Subramanian</h2>
-    <div class="underline"></div>
-    <p>Bharani Subramanian is a dedicated traditional astrologer with over 7 years of experience in the field. He is well-versed in Tamil astrology and has studied various gurus, including experts in traditional astrology, Nadi astrology and numerology.</p>
-    <p>His practice is rooted in the belief that astrology is a powerful tool to bring clarity, guidance and peace of mind to those facing life's challenges.</p>
-    <p>He is committed to helping people find solutions to their problems through authentic and practical astrological guidance.</p>
-  </div>
+  <div class="about-copy"><h2 data-i18n="aboutTitle">About Bharani Subramanian</h2><div class="underline"></div><p data-i18n="about1">Bharani Subramanian is a dedicated traditional astrologer with over 7 years of experience in the field. He is well-versed in Tamil astrology and has studied various gurus, including experts in traditional astrology, Nadi astrology and numerology.</p><p data-i18n="about2">His practice is rooted in the belief that astrology is a powerful tool to bring clarity, guidance and peace of mind to those facing life's challenges.</p><p data-i18n="about3">He is committed to helping people find solutions to their problems through authentic and practical astrological guidance.</p></div>
   <div class="award-wrap"><img src="recognition.jpg" alt="Recognition ceremony"></div>
-  <div id="recognition" class="recognition">
-    <h2>Recognition &amp; Experience</h2>
-    <div class="underline"></div>
-    <p>🏆 &nbsp; Recognized for his contribution<br>&nbsp;&nbsp;&nbsp;&nbsp;to the field of astrology</p>
-    <p>🎓 &nbsp; Honorary Doctorate<br>&nbsp;&nbsp;&nbsp;&nbsp;in Astrology</p>
-    <p>☆ &nbsp; 7 years of experience<br>&nbsp;&nbsp;&nbsp;&nbsp;in traditional astrology,<br>&nbsp;&nbsp;&nbsp;&nbsp;Nadi astrology and numerology</p>
-    <p>♜ &nbsp; Trained under various gurus<br>&nbsp;&nbsp;&nbsp;&nbsp;and experienced in Jamakkol<br>&nbsp;&nbsp;&nbsp;&nbsp;Prasannam, Chozhi Prasannam<br>&nbsp;&nbsp;&nbsp;&nbsp;and Tarot predictions.</p>
-  </div>
+  <div id="recognition" class="recognition"><h2 data-i18n="recognitionTitle">Recognition &amp; Experience</h2><div class="underline"></div><p data-i18n="rec1">🏆 &nbsp; Recognized for his contribution<br>&nbsp;&nbsp;&nbsp;&nbsp;to the field of astrology</p><p data-i18n="rec2">🎓 &nbsp; Honorary Doctorate<br>&nbsp;&nbsp;&nbsp;&nbsp;in Astrology</p><p data-i18n="rec3">☆ &nbsp; 7 years of experience<br>&nbsp;&nbsp;&nbsp;&nbsp;in traditional astrology,<br>&nbsp;&nbsp;&nbsp;&nbsp;Nadi astrology and numerology</p><p data-i18n="rec4">♜ &nbsp; Trained under various gurus<br>&nbsp;&nbsp;&nbsp;&nbsp;and experienced in Jamakkol<br>&nbsp;&nbsp;&nbsp;&nbsp;Prasannam, Chozhi Prasannam<br>&nbsp;&nbsp;&nbsp;&nbsp;and Tarot predictions.</p></div>
 </section>
 
 <section id="consultation" class="consult section-paper">
-  <div id="fees" class="fees">
-    <h2>Consultation Fees</h2>
-    <div class="table-wrap"><table><thead><tr><th>Service</th><th>Price</th></tr></thead><tbody>
-      <tr><td>Written Horoscope &amp; Marriage Compatibility</td><td>₹101</td></tr>
-      <tr><td>Handwritten Traditional Horoscope</td><td>₹250</td></tr>
-      <tr><td>All other consultations</td><td>Please enquire</td></tr>
-      <tr><td>Jamakkol / Chozhi / Tarot / Other Readings</td><td>Please enquire</td></tr>
-    </tbody></table></div>
-    <p class="note">🚚 &nbsp; Courier charges are additional for physical horoscope delivery.<br>
-    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;For clients outside India, please enquire for prices.</p>
-  </div>
-
-  <div class="form-box">
-    <h2>Request a Consultation</h2><p>Fill in your details and we will get in touch with you.</p>
-    <form id="consultForm">
+  <div id="fees" class="fees"><h2 data-i18n="feesTitle">Consultation Fees</h2><div class="table-wrap"><table><thead><tr><th data-i18n="thService">Service</th><th data-i18n="thPrice">Price</th></tr></thead><tbody><tr><td data-i18n="fee1">Written Horoscope &amp; Marriage Compatibility</td><td>₹101</td></tr><tr><td data-i18n="fee2">Handwritten Traditional Horoscope</td><td>₹250</td></tr><tr><td data-i18n="fee3">All other consultations</td><td data-i18n="enquire">Please enquire</td></tr><tr><td data-i18n="fee4">Jamakkol / Chozhi / Tarot / Other Readings</td><td data-i18n="enquire">Please enquire</td></tr></tbody></table></div><p class="note" data-i18n="feeNote">🚚 &nbsp; Courier charges are additional for physical horoscope delivery.<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;For clients outside India, please enquire for prices.</p></div>
+  <div class="form-box"><h2 data-i18n="formTitle">Request a Consultation</h2><p data-i18n="formIntro">Fill in your details and we will get in touch with you.</p>
+    <form id="consultForm" novalidate>
       <div class="form-grid">
-        <label>Name <b>*</b><input name="name" required></label>
-        <label>WhatsApp Number <b>*</b><div class="phone"><span>+91</span><input name="phone" required placeholder="Your number"></div></label>
-        <label>Email <b>*</b><input type="email" name="email" required></label>
-        <label>Service Required<select name="service"><option>Select an option</option><option>Birth / New Horoscope</option><option>Marriage Compatibility</option><option>Handwritten Traditional Horoscope</option><option>Jamakkol / Chozhi Prasannam</option><option>Nadi Astrology</option><option>Tarot</option><option>Numerology</option><option>Other Consultation</option></select></label>
-        <label>Preferred Language<select name="language"><option>Select an option</option><option>English</option><option>Tamil</option></select></label>
-        <label>Preferred Time<select name="time"><option>Select an option</option><option>Morning</option><option>Afternoon</option><option>Evening</option></select></label>
+        <label><span data-i18n="labelName">Name <b>*</b></span><input name="name" autocomplete="name" required></label>
+        <label><span data-i18n="labelPhone">WhatsApp Number <b>*</b></span><div class="phone"><span>+91</span><input name="phone" autocomplete="tel" required placeholder="Your number"></div></label>
+        <label><span data-i18n="labelEmail">Email <b>*</b></span><input type="email" name="email" autocomplete="email" required></label>
+        <label><span data-i18n="labelService">Service Required</span><select name="service"><option value="">Select an option</option><option value="Birth / New Horoscope">Birth / New Horoscope</option><option value="Marriage Compatibility">Marriage Compatibility</option><option value="Handwritten Traditional Horoscope">Handwritten Traditional Horoscope</option><option value="Jamakkol / Chozhi Prasannam">Jamakkol / Chozhi Prasannam</option><option value="Nadi Astrology">Nadi Astrology</option><option value="Tarot">Tarot</option><option value="Numerology">Numerology</option><option value="Other Consultation">Other Consultation</option></select></label>
+        <label><span data-i18n="labelLanguage">Preferred Language</span><select name="language"><option value="">Select an option</option><option value="English">English</option><option value="Tamil">Tamil</option></select></label>
+        <label><span data-i18n="labelTime">Preferred Time</span><select name="time"><option value="">Select an option</option><option value="Morning">Morning</option><option value="Afternoon">Afternoon</option><option value="Evening">Evening</option></select></label>
       </div>
-      <label>Your Message / Details<textarea name="message" placeholder="Tell us a little about your requirement..."></textarea></label>
-      <button class="submit" type="submit">➤ &nbsp; Submit Enquiry</button>
+      <label><span data-i18n="labelMessage">Your Message / Details</span><textarea name="message" placeholder="Tell us a little about your requirement..."></textarea></label>
+      <button class="submit" type="submit" data-i18n="submit">➤ &nbsp; Submit Enquiry</button><div id="formStatus" class="form-status" role="status" aria-live="polite"></div>
     </form>
   </div>
-
-  <aside id="contact" class="contact-card">
-    <div class="big-wa">◉</div><h3>Or reach us directly on<br><strong>WhatsApp<br>+91 98472 93306</strong></h3>
-    <div class="contact-icon">✉</div><h3>Email<br><strong>kmsubramanian@gmail.com</strong></h3>
-    <div class="contact-icon">◎</div><h3>Languages<br>English | Tamil</h3>
-    <div class="small-rule">◆</div><em>For queries outside India,<br>please enquire for prices.</em>
-  </aside>
+  <aside id="contact" class="contact-card"><a class="contact-action" href="https://wa.me/919847293306" target="_blank" rel="noopener"><div class="big-wa">◉</div><h3 data-i18n="contactWhatsApp">Or reach us directly on<br><strong>WhatsApp<br>+91 98472 93306</strong></h3></a><a class="contact-action" href="mailto:kmsubramanian@gmail.com"><div class="contact-icon">✉</div><h3 data-i18n="contactEmail">Email<br><strong>kmsubramanian@gmail.com</strong></h3></a><div class="contact-icon">◎</div><h3 data-i18n="contactLanguages">Languages<br>English | Tamil</h3><div class="small-rule">◆</div><em data-i18n="contactOutside">For queries outside India,<br>please enquire for prices.</em></aside>
 </section>
 </main>
-
-<footer><span>◆</span> &nbsp; || &nbsp; Om Shri Dharmasastha Namah &nbsp; || &nbsp; <span>◆</span>
-  <div class="footer-icons"><a href="https://wa.me/919847293306">◉</a> <a href="mailto:kmsubramanian@gmail.com">✉</a> <span>◎</span></div>
-</footer>
+<footer><span>◆</span>&nbsp; || &nbsp;<span data-i18n="footerMantra">Om Shri Dharmasastha Namah</span>&nbsp; || &nbsp;<span>◆</span><div class="footer-icons"><a href="https://wa.me/919847293306" target="_blank" rel="noopener">◉</a><a href="mailto:kmsubramanian@gmail.com">✉</a><span>◎</span></div></footer>
 <script src="script.js"></script>
 </body>
 </html>
