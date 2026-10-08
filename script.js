@@ -1,4 +1,12 @@
-document.querySelector('.menu')?.addEventListener('click',()=>document.querySelector('.links')?.classList.toggle('open'));
-document.querySelectorAll('.links a').forEach(a=>a.addEventListener('click',()=>document.querySelector('.links')?.classList.remove('open')));
-document.getElementById('year').textContent=new Date().getFullYear();
-document.getElementById('form').addEventListener('submit',e=>{e.preventDefault();const d=new FormData(e.currentTarget);const s=encodeURIComponent('Astrology enquiry from '+d.get('name'));const b=encodeURIComponent('Name: '+d.get('name')+'\nEmail: '+d.get('email')+'\n\nEnquiry:\n'+d.get('message'));location.href='mailto:kmsubramanian@gmail.com?subject='+s+'&body='+b;});
+document.getElementById("consultForm").addEventListener("submit", function(e){
+  e.preventDefault();
+  const f=new FormData(this);
+  const subject=encodeURIComponent("Consultation enquiry from "+(f.get("name")||"Website visitor"));
+  const body=encodeURIComponent(
+    "Name: "+f.get("name")+"\nWhatsApp: +91 "+f.get("phone")+
+    "\nEmail: "+f.get("email")+"\nService: "+f.get("service")+
+    "\nLanguage: "+f.get("language")+"\nPreferred time: "+f.get("time")+
+    "\n\nMessage:\n"+f.get("message")
+  );
+  window.location.href="mailto:kmsubramanian@gmail.com?subject="+subject+"&body="+body;
+});
