@@ -1,42 +1,92 @@
-const translations = {
-  en:{navHome:'Home',navAbout:'About',navServices:'Services',navFees:'Horoscope &amp; Marriage',navRecognition:'Recognition',navConsultation:'Consultation',navContact:'Contact',heroTitle:'Traditional Tamil Astrologer',heroCenterTitle:'Shri Dharmasastha<br>Astrological Center',heroDesc:'Traditional astrology and spiritual guidance<br>for a better tomorrow.',heroWhatsApp:'◉ &nbsp; Chat on WhatsApp',heroConsult:'Request a Consultation',heroMeta:'Language: English &nbsp; | &nbsp; Tamil &nbsp; | &nbsp; ◉ &nbsp; Worldwide Services',servicesTitle:'Services',servicesSubtitle:'Guidance through the wisdom of tradition',service1Title:'Traditional Astrology',s1a:'Birth chart &amp; new horoscope',s1b:'Traditional horoscope writing',s1c:'Marriage compatibility',s1d:'Career guidance',s1e:'Parigaram (traditional remedies)',s1f:'Jamakkol',service2Title:'Prasannam &amp;<br>Predictive Methods',s2a:'Jamakkol Prasannam',s2b:'Chozhi Prasannam',s2c:'Nadi astrology',service3Title:'Other Consultations',s3a:'Tarot reading',s3b:'Numerology',quote:'“Astrology is not about<br>predicting the future,<br>but about understanding<br>your path and finding<br>solutions to your problems.”',aboutTitle:'About Bharani Subramanian',about1:'Bharani Subramanian is a dedicated traditional astrologer with over 7 years of experience in the field. He is well-versed in Tamil astrology and has studied various gurus, including experts in traditional astrology, Nadi astrology and numerology.',about2:'His practice is rooted in the belief that astrology is a powerful tool to bring clarity, guidance and peace of mind to those facing life\'s challenges.',about3:'He is committed to helping people find solutions to their problems through authentic and practical astrological guidance.',recognitionTitle:'Recognition &amp; Experience',rec1:'🏆 &nbsp; Recognized for his contribution<br>&nbsp;&nbsp;&nbsp;&nbsp;to the field of astrology',rec2:'🎓 &nbsp; Honorary Doctorate<br>&nbsp;&nbsp;&nbsp;&nbsp;in Astrology',rec3:'☆ &nbsp; 7 years of experience<br>&nbsp;&nbsp;&nbsp;&nbsp;in traditional astrology,<br>&nbsp;&nbsp;&nbsp;&nbsp;Nadi astrology and numerology',rec4:'♜ &nbsp; Trained under various gurus<br>&nbsp;&nbsp;&nbsp;&nbsp;and experienced in Jamakkol<br>&nbsp;&nbsp;&nbsp;&nbsp;Prasannam, Chozhi Prasannam<br>&nbsp;&nbsp;&nbsp;&nbsp;and Tarot predictions.',feesTitle:'Consultation Fees',thService:'Service',thPrice:'Price',fee1:'Written Horoscope &amp; Marriage Compatibility',fee2:'Handwritten Traditional Horoscope',fee3:'All other consultations',fee4:'Jamakkol / Chozhi / Tarot / Other Readings',enquire:'Please enquire',feeNote:'🚚 &nbsp; Courier charges are additional for physical horoscope delivery.<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;For clients outside India, please enquire for prices.',formTitle:'Request a Consultation',formIntro:'Fill in your details and we will get in touch with you.',labelName:'Name <b>*</b>',labelPhone:'WhatsApp Number <b>*</b>',labelEmail:'Email <b>*</b>',labelService:'Service Required',labelLanguage:'Preferred Language',labelTime:'Preferred Time',labelMessage:'Your Message / Details',submit:'➤ &nbsp; Submit Enquiry',selectOption:'Select an option',phonePlaceholder:'Your number',messagePlaceholder:'Tell us a little about your requirement...',contactWhatsApp:'Or reach us directly on<br><strong>WhatsApp<br>+91 98472 93306</strong>',contactEmail:'Email<br><strong>kmsubramanian@gmail.com</strong>',contactLanguages:'Languages<br>English | Tamil',contactOutside:'For queries outside India,<br>please enquire for prices.',footerMantra:'Om Shri Dharmasastha Namah',success:'Thank you! Your enquiry has been received. We will contact you shortly.',error:'We could not send your enquiry. Please try again or contact us on WhatsApp.'},
-  ta:{navHome:'முகப்பு',navAbout:'எங்களைப் பற்றி',navServices:'சேவைகள்',navFees:'ஜாதகம் &amp; திருமணம்',navRecognition:'அங்கீகாரம்',navConsultation:'ஆலோசனை',navContact:'தொடர்பு',heroTitle:'பாரம்பரிய தமிழ் ஜோதிடர்',heroCenterTitle:'ஸ்ரீ தர்மசாஸ்தா<br>ஜோதிட மையம்',heroDesc:'பாரம்பரிய ஜோதிடமும் ஆன்மீக வழிகாட்டுதலும்<br>சிறந்த நாளைக்காக.',heroWhatsApp:'◉ &nbsp; WhatsApp-ல் தொடர்புகொள்ளுங்கள்',heroConsult:'ஆலோசனை கோருங்கள்',heroMeta:'மொழிகள்: தமிழ் &nbsp; | &nbsp; ஆங்கிலம் &nbsp; | &nbsp; ◉ &nbsp; உலகளாவிய சேவைகள்',servicesTitle:'சேவைகள்',servicesSubtitle:'பாரம்பரிய ஞானத்தின் வழிகாட்டுதல்',service1Title:'பாரம்பரிய ஜோதிடம்',s1a:'ஜாதக கணிதம் &amp; புதிய ஜாதகம்',s1b:'பாரம்பரிய ஜாதகம் எழுதுதல்',s1c:'திருமண பொருத்தம்',s1d:'தொழில் வழிகாட்டுதல்',s1e:'பரிகாரம் (பாரம்பரிய பரிகாரங்கள்)',s1f:'ஜாமக்கோள் (Jamakkol)',service2Title:'பிரசன்னம் &amp;<br>பலன் கூறும் முறைகள்',s2a:'ஜாமக்கோள் பிரசன்னம் (Jamakkol Prasannam)',s2b:'சோழி பிரசன்னம் (Chozhi Prasannam)',s2c:'நாடி ஜோதிடம் (Nadi Astrology)',service3Title:'பிற ஆலோசனைகள்',s3a:'டாரோ வாசிப்பு (Tarot Reading)',s3b:'எண் கணிதம் (Numerology)',quote:'“ஜோதிடம் என்பது<br>எதிர்காலத்தை மட்டும் கணிப்பது அல்ல;<br>உங்கள் பாதையைப் புரிந்துகொண்டு,<br>உங்கள் பிரச்சினைகளுக்குத்<br>தீர்வுகளைத் தேடுவதாகும்.”',aboutTitle:'பரணி சுப்ரமணியன் பற்றி',about1:'பரணி சுப்ரமணியன் அவர்கள் 7 ஆண்டுகளுக்கும் மேலான அனுபவம் கொண்ட அர்ப்பணிப்புள்ள பாரம்பரிய ஜோதிடர். தமிழ் ஜோதிடத்தில் சிறந்த அறிவும், பாரம்பரிய ஜோதிடம், நாடி ஜோதிடம் மற்றும் எண் கணிதம் ஆகிய துறைகளில் பல்வேறு குருமார்களிடம் பயின்ற அனுபவமும் கொண்டவர்.',about2:'வாழ்க்கையின் சவால்களை எதிர்கொள்ளும் அனைவருக்கும் தெளிவு, வழிகாட்டுதல் மற்றும் மன அமைதியை வழங்க ஜோதிடம் ஒரு சக்திவாய்ந்த கருவி என்ற நம்பிக்கையின் அடிப்படையில் இவரது சேவை அமைந்துள்ளது.',about3:'உண்மையான மற்றும் நடைமுறைக்கு ஏற்ற ஜோதிட வழிகாட்டுதலின் மூலம் மக்களின் பிரச்சினைகளுக்கு தீர்வுகளைத் தேடுவதற்கு உதவுவதில் அவர் உறுதியாக உள்ளார்.',recognitionTitle:'அங்கீகாரம் &amp; அனுபவம்',rec1:'🏆 &nbsp; ஜோதிடத் துறையில்<br>&nbsp;&nbsp;&nbsp;&nbsp;அவரது பங்களிப்புக்கான அங்கீகாரம்',rec2:'🎓 &nbsp; ஜோதிடத்தில்<br>&nbsp;&nbsp;&nbsp;&nbsp;கௌரவ டாக்டர் பட்டம்',rec3:'☆ &nbsp; 7 ஆண்டுகளுக்கும் மேலான அனுபவம்<br>&nbsp;&nbsp;&nbsp;&nbsp;பாரம்பரிய ஜோதிடம்,<br>&nbsp;&nbsp;&nbsp;&nbsp;நாடி ஜோதிடம் மற்றும் எண் கணிதத்தில்',rec4:'♜ &nbsp; பல்வேறு குருமார்களிடம் பயிற்சி<br>&nbsp;&nbsp;&nbsp;&nbsp;ஜாமக்கோள் பிரசன்னம்,<br>&nbsp;&nbsp;&nbsp;&nbsp;சோழி பிரசன்னம் மற்றும்<br>&nbsp;&nbsp;&nbsp;&nbsp;டாரோ பலன்களில் அனுபவம்.',feesTitle:'ஆலோசனை கட்டணம்',thService:'சேவை',thPrice:'கட்டணம்',fee1:'எழுத்து ஜாதகம் &amp; திருமண பொருத்தம்',fee2:'கையெழுத்து பாரம்பரிய ஜாதகம்',fee3:'மற்ற அனைத்து ஆலோசனைகளும்',fee4:'ஜாமக்கோள் / சோழி / டாரோ / பிற வாசிப்புகள்',enquire:'தொடர்புகொள்ளவும்',feeNote:'🚚 &nbsp; அச்சிடப்பட்ட ஜாதகத்தை கூரியர் மூலம் அனுப்புவதற்கான கட்டணம் கூடுதலாகும்.<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;இந்தியாவிற்கு வெளியே உள்ள வாடிக்கையாளர்கள் கட்டணத்திற்குத் தொடர்புகொள்ளவும்.',formTitle:'ஆலோசனை கோருங்கள்',formIntro:'உங்கள் விவரங்களை நிரப்புங்கள்; நாங்கள் உங்களைத் தொடர்புகொள்கிறோம்.',labelName:'பெயர் <b>*</b>',labelPhone:'WhatsApp எண் <b>*</b>',labelEmail:'மின்னஞ்சல் <b>*</b>',labelService:'தேவையான சேவை',labelLanguage:'விருப்பமான மொழி',labelTime:'விருப்பமான நேரம்',labelMessage:'உங்கள் செய்தி / விவரங்கள்',submit:'➤ &nbsp; விசாரணையை அனுப்புங்கள்',selectOption:'ஒரு விருப்பத்தைத் தேர்ந்தெடுக்கவும்',phonePlaceholder:'உங்கள் எண்',messagePlaceholder:'உங்கள் தேவையைப் பற்றி சுருக்கமாக எழுதுங்கள்...',contactWhatsApp:'நேரடியாக தொடர்புகொள்ளுங்கள்<br><strong>WhatsApp<br>+91 98472 93306</strong>',contactEmail:'மின்னஞ்சல்<br><strong>kmsubramanian@gmail.com</strong>',contactLanguages:'மொழிகள்<br>தமிழ் | English',contactOutside:'இந்தியாவிற்கு வெளியே உள்ள கேள்விகளுக்கு,<br>கட்டணத்திற்குத் தொடர்புகொள்ளவும்.',footerMantra:'ஓம் ஸ்ரீ தர்மசாஸ்தா நமஹ',success:'நன்றி! உங்கள் விசாரணை பெறப்பட்டது. விரைவில் உங்களைத் தொடர்புகொள்கிறோம்.',error:'விசாரணையை அனுப்ப முடியவில்லை. மீண்டும் முயற்சிக்கவும் அல்லது WhatsApp மூலம் தொடர்புகொள்ளவும்.'}
-};
+const translations = {"en":{"navHome":"Home","navAbout":"About","navServices":"Services","navFees":"Horoscope &amp; Marriage","navRecognition":"Recognition","navConsultation":"Consultation","navContact":"Contact","heroTitle":"Traditional Tamil Astrologer","heroCenterTitle":"Shri Dharmasastha<br>Astrological Center","heroDesc":"Traditional astrology and spiritual guidance<br>for a better tomorrow.","heroWhatsApp":"◉ &nbsp; Chat on WhatsApp","heroConsult":"Request a Consultation","heroMeta":"Language: English &nbsp; | &nbsp; Tamil &nbsp; | &nbsp; ◉ &nbsp; Worldwide Services","servicesTitle":"Services","servicesSubtitle":"Guidance through the wisdom of tradition","service1Title":"Traditional Astrology","s1a":"Birth chart &amp; new horoscope","s1b":"Traditional horoscope writing","s1c":"Marriage compatibility","s1d":"Career guidance","s1e":"Parigaram (traditional remedies)","s1f":"Jamakkol","service2Title":"Prasannam &amp;<br>Predictive Methods","s2a":"Jamakkol Prasannam","s2b":"Chozhi Prasannam","s2c":"Nadi astrology","service3Title":"Other Consultations","s3a":"Tarot reading","s3b":"Numerology","quote":"“Astrology is not about<br>predicting the future,<br>but about understanding<br>your path and finding<br>solutions to your problems.”","aboutTitle":"About Bharani Subramanian","about1":"Bharani Subramanian is a dedicated traditional astrologer with over 7 years of experience in the field. He is well-versed in Tamil astrology and has studied various gurus, including experts in traditional astrology, Nadi astrology and numerology.","about2":"His practice is rooted in the belief that astrology is a powerful tool to bring clarity, guidance and peace of mind to those facing life's challenges.","about3":"He is committed to helping people find solutions to their problems through authentic and practical astrological guidance.","recognitionTitle":"Recognition &amp; Experience","rec1":"🏆 &nbsp; Recognized for his contribution<br>&nbsp;&nbsp;&nbsp;&nbsp;to the field of astrology","rec2":"🎓 &nbsp; Honorary Doctorate<br>&nbsp;&nbsp;&nbsp;&nbsp;in Astrology","rec3":"☆ &nbsp; 7 years of experience<br>&nbsp;&nbsp;&nbsp;&nbsp;in traditional astrology,<br>&nbsp;&nbsp;&nbsp;&nbsp;Nadi astrology and numerology","rec4":"♜ &nbsp; Trained under various gurus<br>&nbsp;&nbsp;&nbsp;&nbsp;and experienced in Jamakkol<br>&nbsp;&nbsp;&nbsp;&nbsp;Prasannam, Chozhi Prasannam<br>&nbsp;&nbsp;&nbsp;&nbsp;and Tarot predictions.","feesTitle":"Consultation Fees","thService":"Service","thPrice":"Price","fee1":"Written Horoscope &amp; Marriage Compatibility","fee2":"Handwritten Traditional Horoscope","fee3":"All other consultations","fee4":"Jamakkol / Chozhi / Tarot / Other Readings","enquire":"Please enquire","feeNote":"🚚 &nbsp; Courier charges are additional for physical horoscope delivery.<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;For clients outside India, please enquire for prices.","formTitle":"Request a Consultation","formIntro":"Fill in your details and we will get in touch with you.","labelName":"Name <b>*</b>","labelPhone":"WhatsApp Number <b>*</b>","labelEmail":"Email <b>*</b>","labelService":"Service Required","labelLanguage":"Preferred Language","labelTime":"Preferred Time","labelMessage":"Your Message / Details","submit":"➤ &nbsp; Submit Enquiry","selectOption":"Select an option","phonePlaceholder":"Your number","messagePlaceholder":"Tell us a little about your requirement...","contactWhatsApp":"Or reach us directly on<br><strong>WhatsApp<br>+91 98472 93306</strong>","contactEmail":"Email<br><strong>kmsubramanian@gmail.com</strong>","contactLanguages":"Languages<br>English | Tamil","contactOutside":"For queries outside India,<br>please enquire for prices.","footerMantra":"Om Shri Dharmasastha Namah","success":"Thank you! Your enquiry has been received. We will contact you shortly.","error":"We could not send your enquiry. Please try again or contact us on WhatsApp."},"ta":{"navHome":"முகப்பு","navAbout":"எங்களைப் பற்றி","navServices":"சேவைகள்","navFees":"ஜாதகம் &amp; திருமணம்","navRecognition":"அங்கீகாரம்","navConsultation":"ஆலோசனை","navContact":"தொடர்பு","heroTitle":"பாரம்பரிய தமிழ் ஜோதிடர்","heroCenterTitle":"ஸ்ரீ தர்மசாஸ்தா<br>ஜோதிட மையம்","heroDesc":"பாரம்பரிய ஜோதிடமும் ஆன்மீக வழிகாட்டுதலும்<br>சிறந்த நாளைக்காக.","heroWhatsApp":"◉ &nbsp; WhatsApp-ல் தொடர்புகொள்ளுங்கள்","heroConsult":"ஆலோசனை கோருங்கள்","heroMeta":"மொழிகள்: தமிழ் &nbsp; | &nbsp; ஆங்கிலம் &nbsp; | &nbsp; ◉ &nbsp; உலகளாவிய சேவைகள்","servicesTitle":"சேவைகள்","servicesSubtitle":"பாரம்பரிய ஞானத்தின் வழிகாட்டுதல்","service1Title":"பாரம்பரிய ஜோதிடம்","s1a":"ஜாதக கணிதம் &amp; புதிய ஜாதகம்","s1b":"பாரம்பரிய ஜாதகம் எழுதுதல்","s1c":"திருமண பொருத்தம்","s1d":"தொழில் வழிகாட்டுதல்","s1e":"பரிகாரம் (பாரம்பரிய பரிகாரங்கள்)","s1f":"ஜாமக்கோள் (Jamakkol)","service2Title":"பிரசன்னம் &amp;<br>பலன் கூறும் முறைகள்","s2a":"ஜாமக்கோள் பிரசன்னம் (Jamakkol Prasannam)","s2b":"சோழி பிரசன்னம் (Chozhi Prasannam)","s2c":"நாடி ஜோதிடம் (Nadi Astrology)","service3Title":"பிற ஆலோசனைகள்","s3a":"டாரோ வாசிப்பு (Tarot Reading)","s3b":"எண் கணிதம் (Numerology)","quote":"“ஜோதிடம் என்பது<br>எதிர்காலத்தை மட்டும் கணிப்பது அல்ல;<br>உங்கள் பாதையைப் புரிந்துகொண்டு,<br>உங்கள் பிரச்சினைகளுக்குத்<br>தீர்வுகளைத் தேடுவதாகும்.”","aboutTitle":"பரணி சுப்ரமணியன் பற்றி","about1":"பரணி சுப்ரமணியன் அவர்கள் 7 ஆண்டுகளுக்கும் மேலான அனுபவம் கொண்ட அர்ப்பணிப்புள்ள பாரம்பரிய ஜோதிடர். தமிழ் ஜோதிடத்தில் சிறந்த அறிவும், பாரம்பரிய ஜோதிடம், நாடி ஜோதிடம் மற்றும் எண் கணிதம் ஆகிய துறைகளில் பல்வேறு குருமார்களிடம் பயின்ற அனுபவமும் கொண்டவர்.","about2":"வாழ்க்கையின் சவால்களை எதிர்கொள்ளும் அனைவருக்கும் தெளிவு, வழிகாட்டுதல் மற்றும் மன அமைதியை வழங்க ஜோதிடம் ஒரு சக்திவாய்ந்த கருவி என்ற நம்பிக்கையின் அடிப்படையில் இவரது சேவை அமைந்துள்ளது.","about3":"உண்மையான மற்றும் நடைமுறைக்கு ஏற்ற ஜோதிட வழிகாட்டுதலின் மூலம் மக்களின் பிரச்சினைகளுக்கு தீர்வுகளைத் தேடுவதற்கு உதவுவதில் அவர் உறுதியாக உள்ளார்.","recognitionTitle":"அங்கீகாரம் &amp; அனுபவம்","rec1":"🏆 &nbsp; ஜோதிடத் துறையில்<br>&nbsp;&nbsp;&nbsp;&nbsp;அவரது பங்களிப்புக்கான அங்கீகாரம்","rec2":"🎓 &nbsp; ஜோதிடத்தில்<br>&nbsp;&nbsp;&nbsp;&nbsp;கௌரவ டாக்டர் பட்டம்","rec3":"☆ &nbsp; 7 ஆண்டுகளுக்கும் மேலான அனுபவம்<br>&nbsp;&nbsp;&nbsp;&nbsp;பாரம்பரிய ஜோதிடம்,<br>&nbsp;&nbsp;&nbsp;&nbsp;நாடி ஜோதிடம் மற்றும் எண் கணிதத்தில்","rec4":"♜ &nbsp; பல்வேறு குருமார்களிடம் பயிற்சி<br>&nbsp;&nbsp;&nbsp;&nbsp;ஜாமக்கோள் பிரசன்னம்,<br>&nbsp;&nbsp;&nbsp;&nbsp;சோழி பிரசன்னம் மற்றும்<br>&nbsp;&nbsp;&nbsp;&nbsp;டாரோ பலன்களில் அனுபவம்.","feesTitle":"ஆலோசனை கட்டணம்","thService":"சேவை","thPrice":"கட்டணம்","fee1":"எழுத்து ஜாதகம் &amp; திருமண பொருத்தம்","fee2":"கையெழுத்து பாரம்பரிய ஜாதகம்","fee3":"மற்ற அனைத்து ஆலோசனைகளும்","fee4":"ஜாமக்கோள் / சோழி / டாரோ / பிற வாசிப்புகள்","enquire":"தொடர்புகொள்ளவும்","feeNote":"🚚 &nbsp; அச்சிடப்பட்ட ஜாதகத்தை கூரியர் மூலம் அனுப்புவதற்கான கட்டணம் கூடுதலாகும்.<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;இந்தியாவிற்கு வெளியே உள்ள வாடிக்கையாளர்கள் கட்டணத்திற்குத் தொடர்புகொள்ளவும்.","formTitle":"ஆலோசனை கோருங்கள்","formIntro":"உங்கள் விவரங்களை நிரப்புங்கள்; நாங்கள் உங்களைத் தொடர்புகொள்கிறோம்.","labelName":"பெயர் <b>*</b>","labelPhone":"WhatsApp எண் <b>*</b>","labelEmail":"மின்னஞ்சல் <b>*</b>","labelService":"தேவையான சேவை","labelLanguage":"விருப்பமான மொழி","labelTime":"விருப்பமான நேரம்","labelMessage":"உங்கள் செய்தி / விவரங்கள்","submit":"➤ &nbsp; விசாரணையை அனுப்புங்கள்","selectOption":"ஒரு விருப்பத்தைத் தேர்ந்தெடுக்கவும்","phonePlaceholder":"உங்கள் எண்","messagePlaceholder":"உங்கள் தேவையைப் பற்றி சுருக்கமாக எழுதுங்கள்...","contactWhatsApp":"நேரடியாக தொடர்புகொள்ளுங்கள்<br><strong>WhatsApp<br>+91 98472 93306</strong>","contactEmail":"மின்னஞ்சல்<br><strong>kmsubramanian@gmail.com</strong>","contactLanguages":"மொழிகள்<br>தமிழ் | English","contactOutside":"இந்தியாவிற்கு வெளியே உள்ள கேள்விகளுக்கு,<br>கட்டணத்திற்குத் தொடர்புகொள்ளவும்.","footerMantra":"ஓம் ஸ்ரீ தர்மசாஸ்தா நமஹ","success":"நன்றி! உங்கள் விசாரணை பெறப்பட்டது. விரைவில் உங்களைத் தொடர்புகொள்கிறோம்.","error":"விசாரணையை அனுப்ப முடியவில்லை. மீண்டும் முயற்சிக்கவும் அல்லது WhatsApp மூலம் தொடர்புகொள்ளவும்."}};
+const serviceOptions = [["Birth / New Horoscope", "பிறப்பு / புதிய ஜாதகம்"], ["Marriage Compatibility", "திருமண பொருத்தம்"], ["Handwritten Traditional Horoscope", "கையெழுத்து பாரம்பரிய ஜாதகம்"], ["Jamakkol / Chozhi Prasannam", "ஜாமக்கோள் / சோழி பிரசன்னம்"], ["Nadi Astrology", "நாடி ஜோதிடம் (Nadi Astrology)"], ["Tarot", "டாரோ (Tarot)"], ["Numerology", "எண் கணிதம் (Numerology)"], ["Other Consultation", "பிற ஆலோசனை"]];
+const timeOptions = [["Morning", "காலை"], ["Afternoon", "மதியம்"], ["Evening", "மாலை"]];
+const languageOptions = [["English", "ஆங்கிலம் (English)"], ["Tamil", "தமிழ் (Tamil)"]];
 
-const serviceOptions=[['Birth / New Horoscope','பிறப்பு / புதிய ஜாதகம்'],['Marriage Compatibility','திருமண பொருத்தம்'],['Handwritten Traditional Horoscope','கையெழுத்து பாரம்பரிய ஜாதகம்'],['Jamakkol / Chozhi Prasannam','ஜாமக்கோள் / சோழி பிரசன்னம்'],['Nadi Astrology','நாடி ஜோதிடம் (Nadi Astrology)'],['Tarot','டாரோ (Tarot)'],['Numerology','எண் கணிதம் (Numerology)'],['Other Consultation','பிற ஆலோசனை']];
-const timeOptions=[['Morning','காலை'],['Afternoon','மதியம்'],['Evening','மாலை']];
-const languageOptions=[['English','ஆங்கிலம் (English)'],['Tamil','தமிழ் (Tamil)']];
-
-function fillSelect(select, options, lang, current=''){
-  const t=translations[lang];
-  select.innerHTML=`<option value="">${t.selectOption}</option>`+options.map(([en,ta])=>`<option value="${en}">${lang==='ta'?ta:en}</option>`).join('');
-  select.value=current;
-}
-function setLanguage(lang){
-  const t=translations[lang];
-  document.documentElement.lang=lang==='ta'?'ta':'en';
-  document.querySelectorAll('[data-i18n]').forEach(el=>{const key=el.dataset.i18n;if(t[key]!==undefined)el.innerHTML=t[key];});
-  document.getElementById('langEN').classList.toggle('active',lang==='en');document.getElementById('langTA').classList.toggle('active',lang==='ta');
-  const service=document.querySelector('select[name="service"]'), time=document.querySelector('select[name="time"]'), pref=document.querySelector('select[name="language"]');
-  const vals={service:service?.value||'',time:time?.value||'',pref:pref?.value||''};
-  if(service)fillSelect(service,serviceOptions,lang,vals.service);if(time)fillSelect(time,timeOptions,lang,vals.time);if(pref)fillSelect(pref,languageOptions,lang,vals.pref);
-  const phone=document.querySelector('input[name="phone"]'), msg=document.querySelector('textarea[name="message"]');
-  if(phone)phone.placeholder=t.phonePlaceholder;if(msg)msg.placeholder=t.messagePlaceholder;
-  localStorage.setItem('siteLanguage',lang);
-  document.getElementById('mainNav').classList.remove('open');document.getElementById('menuToggle').setAttribute('aria-expanded','false');
+function fillSelect(select, options, lang, current='') {
+  const t = translations[lang];
+  select.innerHTML = `<option value="">${t.selectOption}</option>` + options.map(([en, ta]) => `<option value="${en}">${lang === 'ta' ? ta : en}</option>`).join('');
+  select.value = current;
 }
 
-document.getElementById('langEN').addEventListener('click',()=>setLanguage('en'));document.getElementById('langTA').addEventListener('click',()=>setLanguage('ta'));
-const menuToggle=document.getElementById('menuToggle');const mainNav=document.getElementById('mainNav');menuToggle.addEventListener('click',()=>{const open=mainNav.classList.toggle('open');menuToggle.setAttribute('aria-expanded',String(open));});
-mainNav.querySelectorAll('a').forEach(a=>a.addEventListener('click',()=>{mainNav.classList.remove('open');menuToggle.setAttribute('aria-expanded','false');}));
+function setLanguage(lang) {
+  const safeLang = lang === 'ta' ? 'ta' : 'en';
+  const t = translations[safeLang];
+  document.documentElement.lang = safeLang;
+  document.querySelectorAll('[data-i18n]').forEach(el => {
+    const key = el.dataset.i18n;
+    if (Object.prototype.hasOwnProperty.call(t, key)) el.innerHTML = t[key];
+  });
+  document.getElementById('langEN').classList.toggle('active', safeLang === 'en');
+  document.getElementById('langTA').classList.toggle('active', safeLang === 'ta');
+  const service = document.querySelector('select[name="service"]');
+  const time = document.querySelector('select[name="time"]');
+  const pref = document.querySelector('select[name="language"]');
+  const vals = { service: service?.value || '', time: time?.value || '', pref: pref?.value || '' };
+  if (service) fillSelect(service, serviceOptions, safeLang, vals.service);
+  if (time) fillSelect(time, timeOptions, safeLang, vals.time);
+  if (pref) fillSelect(pref, languageOptions, safeLang, vals.pref);
+  const phone = document.querySelector('input[name="phone"]');
+  const msg = document.querySelector('textarea[name="message"]');
+  if (phone) phone.placeholder = t.phonePlaceholder;
+  if (msg) msg.placeholder = t.messagePlaceholder;
+  localStorage.setItem('siteLanguage', safeLang);
+  const mainNav = document.getElementById('mainNav');
+  const menuToggle = document.getElementById('menuToggle');
+  if (mainNav) mainNav.classList.remove('open');
+  if (menuToggle) menuToggle.setAttribute('aria-expanded', 'false');
+}
 
-setLanguage(localStorage.getItem('siteLanguage')||'en');
+const langEN = document.getElementById('langEN');
+const langTA = document.getElementById('langTA');
+const menuToggle = document.getElementById('menuToggle');
+const mainNav = document.getElementById('mainNav');
+langEN.addEventListener('click', () => setLanguage('en'));
+langTA.addEventListener('click', () => setLanguage('ta'));
+menuToggle.addEventListener('click', () => {
+  const open = mainNav.classList.toggle('open');
+  menuToggle.setAttribute('aria-expanded', String(open));
+});
+mainNav.querySelectorAll('a').forEach(a => a.addEventListener('click', () => {
+  mainNav.classList.remove('open');
+  menuToggle.setAttribute('aria-expanded', 'false');
+}));
+setLanguage(localStorage.getItem('siteLanguage') || 'en');
 
-document.getElementById('consultForm').addEventListener('submit',async function(e){
+document.getElementById('consultForm').addEventListener('submit', async function (e) {
   e.preventDefault();
-  const form=this, status=document.getElementById('formStatus'), button=form.querySelector('.submit'), lang=document.documentElement.lang==='ta'?'ta':'en', t=translations[lang];
-  if(!form.reportValidity())return;
-  status.textContent='';status.className='form-status';button.disabled=true;button.classList.add('loading');
-  const data=Object.fromEntries(new FormData(form).entries());data.uiLanguage=lang;
-  try{const res=await fetch('/api/consultation',{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify(data)});const result=await res.json();if(!res.ok||!result.ok)throw new Error(result.error||'error');status.textContent=t.success;status.classList.add('success');form.reset();setLanguage(lang);}catch(err){console.error(err);status.textContent=t.error;status.classList.add('error');}finally{button.disabled=false;button.classList.remove('loading');}
+  const form = this;
+  const status = document.getElementById('formStatus');
+  const button = form.querySelector('.submit');
+  const lang = document.documentElement.lang === 'ta' ? 'ta' : 'en';
+  const t = translations[lang];
+  if (!form.reportValidity()) return;
+  status.textContent = '';
+  status.className = 'form-status';
+  button.disabled = true;
+  button.classList.add('loading');
+  const data = Object.fromEntries(new FormData(form).entries());
+  data.uiLanguage = lang;
+  try {
+    const res = await fetch('/api/consultation', {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json', 'Accept': 'application/json' },
+      credentials: 'same-origin',
+      body: JSON.stringify(data)
+    });
+    let result = {};
+    try { result = await res.json(); } catch (_) { result = {}; }
+    if (!res.ok || !result.ok) throw new Error(result.error || `HTTP ${res.status}`);
+    status.textContent = t.success;
+    status.classList.add('success');
+    form.reset();
+    setLanguage(lang);
+  } catch (err) {
+    console.error('Consultation submission failed:', err);
+    status.textContent = t.error;
+    status.classList.add('error');
+  } finally {
+    button.disabled = false;
+    button.classList.remove('loading');
+  }
 });

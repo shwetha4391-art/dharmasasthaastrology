@@ -16,3 +16,60 @@ footer{min-height:58px;background:#062b49;color:#f0c85d;border-top:5px solid #a7
   .consult{grid-template-columns:1fr;padding:24px 13px;gap:20px}.fees h2{font-size:30px}.fees table{font-size:13px}.fees th,.fees td{padding:9px 8px;vertical-align:top}.fees th{font-size:14px}.fees td:last-child,.fees th:last-child{width:31%}.note{font-size:13px;line-height:1.5}.form-box{padding:14px}.form-box h2{font-size:29px}.form-box>p{font-size:14px;line-height:1.4}.form-grid{grid-template-columns:1fr;gap:10px}.form-box label{font-size:14px}.form-box input,.form-box select,.form-box textarea{font-size:16px;padding:10px}.form-box textarea{height:100px}.submit{font-size:17px;padding:12px}.form-status{font-size:14px}.contact-card{padding:15px 8px 5px}.contact-card h3{font-size:16px}.contact-card strong{font-size:17px}footer{min-height:68px;padding:12px 70px 12px 12px;text-align:center}.footer-icons{right:12px;gap:10px;font-size:20px}
 }
 @media(max-width:390px){.brand-title{font-size:20px}.brand-sub{font-size:15px}.om{font-size:34px}.langs{font-size:13px}.hero-center h1{font-size:28px}.hero-center h3{font-size:25px}.hero-photo{height:185px}.section-heading h2,.fees h2,.form-box h2{font-size:28px}.fees th,.fees td{padding:8px 6px}.card ul{font-size:13px}}
+
+/* Final mobile layout: intentional phone design, independent of desktop grid. */
+@media (max-width: 700px) {
+  html, body { width:100%; max-width:100%; overflow-x:hidden; }
+  .topbar { position:sticky; top:0; }
+  .hero {
+    display:grid;
+    grid-template-columns:1fr 1fr;
+    grid-template-areas:
+      "center center"
+      "left right";
+    height:auto;
+    width:100%;
+    overflow:hidden;
+  }
+  .hero-center {
+    grid-area:center;
+    width:100%;
+    min-width:0;
+    padding:30px 18px 24px;
+    box-sizing:border-box;
+  }
+  .hero-photo {
+    width:100%;
+    min-width:0;
+    height:215px;
+    grid-row:auto;
+    overflow:hidden;
+  }
+  .hero-photo.left { grid-area:left; }
+  .hero-photo.right { grid-area:right; }
+  .hero-photo img { display:block; width:100%; height:100%; object-fit:cover; }
+  .hero-photo.left img { object-position:center top; }
+  .hero-photo.right img { object-position:center top; }
+  .hero-center h1 { font-size:32px; line-height:1.02; max-width:100%; }
+  .hero-center h2 { font-size:20px; line-height:1.15; }
+  .hero-center h3 { font-size:29px; line-height:1.02; }
+  .hero-center p { font-size:16px; line-height:1.28; }
+  .hero-buttons { width:100%; }
+  .hero-buttons .btn { width:min(100%, 290px); box-sizing:border-box; }
+  .hero-meta { max-width:330px; margin-left:auto; margin-right:auto; }
+  .services, .about, .consult { width:100%; box-sizing:border-box; }
+  .service-grid, .about, .consult { grid-template-columns:1fr; }
+  .form-grid { grid-template-columns:1fr; }
+  .table-wrap { overflow-x:auto; -webkit-overflow-scrolling:touch; }
+  .fees table { min-width:0; }
+  footer { width:100%; box-sizing:border-box; }
+}
+
+@media (max-width: 390px) {
+  .brand-title { font-size:20px; }
+  .brand-sub { font-size:15px; }
+  .hero-center { padding-left:14px; padding-right:14px; }
+  .hero-center h1 { font-size:29px; }
+  .hero-center h3 { font-size:26px; }
+  .hero-photo { height:190px; }
+}

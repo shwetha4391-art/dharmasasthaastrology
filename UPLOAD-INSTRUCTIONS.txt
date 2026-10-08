@@ -1,20 +1,3 @@
-FINAL WEBSITE UPDATE
-
-Replace the existing files in the GitHub repository with ALL files in this package, including the three JPG files and wrangler.jsonc.
-
-Required files:
-index.html
-styles.css
-script.js
-index.js
-wrangler.jsonc
-bharani.jpg
-dharmasastha.jpg
-recognition.jpg
-robots.txt
-sitemap.xml
-
-Commit to main. Cloudflare should deploy automatically.
-
-Do NOT upload the ZIP itself.
-Do NOT change the RESEND_API_KEY secret in Cloudflare.
+FINAL v3. Replace the website files in GitHub with this package.
+IMPORTANT: RESEND_API_KEY must be added under the deployed Worker Settings > Variables and Secrets, NOT Workers Builds > Build Variables and Secrets. Then click Deploy for the secret.
+After code deploys, test /api/health and the consultation form.
